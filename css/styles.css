@@ -528,6 +528,7 @@ h1, h2, h3, h4, h5, .hero-title, .pet-name, .recuerdos-title {
 }
 
 .audio-players {
+  display: none;
   position: fixed;
   top: 0;
   left: -9999px;
