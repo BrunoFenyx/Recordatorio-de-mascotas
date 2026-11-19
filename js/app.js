@@ -270,8 +270,7 @@
               '<h2 class="pet-name">' + escapeHtml(mascota.nombre) + "</h2>" +
               especie +
             "</div>" +
-            '<div class="meta-row">' + anios + songChip(mascota) + "</div>" +
-            '<p class="song-status" data-song-status role="status"></p>' +
+            (anios ? '<div class="meta-row">' + anios + "</div>" : "") +
             '<div class="historia">' +
               '<span class="historia-label">' +
               '<i class="bi bi-feather" aria-hidden="true"></i> Historia</span>' +
@@ -292,7 +291,6 @@
 
     guardBrokenImages(section);
     initCarousel(section, mascota, recursos);
-    initSongChip(section, mascota);
     return section;
   }
 
@@ -912,7 +910,6 @@
     });
 
     initReveal();
-    preloadSongPlayers(mascotas);
   }
 
   if (document.readyState === "loading") {
